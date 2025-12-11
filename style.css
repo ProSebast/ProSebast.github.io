@@ -1,3 +1,32 @@
+/* ================================ */
+/* 🌐 BORDES NEÓN CELESTE (GLOBAL) */
+/* ================================ */
+
+.panel,
+.proj-card,
+.contact-section {
+  border: 1.5px solid rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.25) !important;
+}
+
+/* Hover más intenso */
+.proj-card:hover {
+  border-color: #00eaff !important;
+  box-shadow: 0 0 22px rgba(0, 255, 255, 0.45) !important;
+}
+
+/* Botones generales */
+.btn {
+  border: 1.5px solid rgba(0, 240, 255, 0.35) !important;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.22) !important;
+}
+
+.btn:hover {
+  box-shadow: 0 0 16px rgba(0, 255, 255, 0.40) !important;
+  border-color: #00eaff !important;
+}
+
+
 /* Reset y base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html,body { height: 100%; }
