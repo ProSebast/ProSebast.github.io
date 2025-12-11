@@ -1,117 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Sebastián Álvarez</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sebastián Álvarez — Portafolio</title>
 
-    <!-- Animaciones AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS (scroll animations) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
 </head>
 <body>
 
-    <!-- 🌸 Intro Flor -->
-    <div id="intro">
-        <img src="https://i.imgur.com/E6mfcnr.png" class="intro-flower">
+  <!-- Intro overlay con flor SVG -->
+  <div id="intro">
+    <!-- SVG flor celeste (self-contained) -->
+    <div class="flower-wrap" aria-hidden="true">
+      <svg class="flower" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="g1" cx="50%" cy="40%">
+            <stop offset="0%" stop-color="#bff6ff"/>
+            <stop offset="60%" stop-color="#4ddcff"/>
+            <stop offset="100%" stop-color="#00bfff"/>
+          </radialGradient>
+        </defs>
+        <g transform="translate(100,100)">
+          <!-- pétalos -->
+          <g class="petals">
+            <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(0) translate(60,0)"/>
+            <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(45) translate(60,0)"/>
+            <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(90) translate(60,0)"/>
+            <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(135) translate(60,0)"/>
+            <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(180) translate(60,0)"/>
+            <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(225) translate(60,0)"/>
+            <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(270) translate(60,0)"/>
+            <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(315) translate(60,0)"/>
+          </g>
+          <!-- centro -->
+          <circle r="22" fill="#d9ffff" stroke="#00bfff" stroke-width="3" />
+        </g>
+      </svg>
     </div>
+  </div>
 
-    <!-- 🌟 Contenido Principal -->
-    <div id="main-content" class="hidden">
+  <!-- Partículas de fondo -->
+  <div id="particles"></div>
 
-        <header class="hero">
-            <h1 class="glow">Sebastián Alejandro Álvarez Aravena</h1>
-            <p class="subtitle">Desarrollador • Ingeniería en Informática</p>
+  <!-- Contenido principal -->
+  <main id="main-content" class="hidden">
 
-            <div class="contact-info">
-                <a href="mailto:seba.meli.alvarez@gmail.com">📧 Correo</a>
-                <a href="https://github.com/ProSebast" target="_blank">💻 GitHub</a>
-                <span>📱 +56 9 9504 4040</span>
-            </div>
-        </header>
+    <!-- Header / Hero -->
+    <header class="hero">
+      <div class="hero-inner">
+        <h1 class="name glow">Sebastián Alejandro Álvarez Aravena</h1>
+        <h2 class="role">Soy <span class="typing"></span></h2>
 
-        <section class="container">
+        <div class="contact">
+          <a href="mailto:seba.meli.alvarez@gmail.com" class="btn">📧 seba.meli.alvarez@gmail.com</a>
+          <a href="https://github.com/ProSebast" class="btn" target="_blank" rel="noopener">💻 @ProSebast</a>
+          <span class="phone">📱 +56 9 9504 4040</span>
+        </div>
+      </div>
+    </header>
 
-            <section class="card" data-aos="fade-up">
-                <h2>🎯 Objetivo Profesional</h2>
-                <p>
-                    Apasionado por la tecnología y el desarrollo de software. Busco integrarme a un equipo dinámico 
-                    donde pueda aportar mis habilidades técnicas y seguir creciendo en proyectos reales.
-                </p>
-            </section>
+    <!-- Secciones principales -->
+    <section class="content">
 
-            <section class="card" data-aos="fade-up">
-                <h2>🎓 Formación Académica</h2>
-                <ul>
-                    <li><strong>Ingeniería en Informática</strong> – Duoc UC (Cursando)</li>
-                    <li><strong>Analista Programador</strong></li>
-                    <li><strong>Certificación en Arquitectura de Software</strong></li>
-                    <li>Enseñanza Media – Colegio San Agustín del Bajo</li>
-                </ul>
-            </section>
+      <!-- RESUMEN -->
+      <section class="panel" data-aos="fade-up">
+        <h3>Resumen</h3>
+        <p class="lead">
+          Apasionado por la tecnología y el desarrollo de software, enfocado en crear proyectos personales y colaborativos que reflejen mis habilidades técnicas y mi crecimiento profesional.
+        </p>
+        <p>
+          Actualmente cursando Ingeniería en Informática en Duoc UC. Experiencia en proyectos front-end, mantenimiento de sitios web y automatizaciones en Python.
+        </p>
+      </section>
 
-            <section class="card" data-aos="zoom-in">
-                <h2>💼 Experiencia</h2>
-                <ul>
-                    <li><strong>Front-End (Proyecto Académico)</strong> – Duoc UC (2024)</li>
-                    <br>
-                    <li><strong>Contraplano</strong> – Medio digital (2024)</li>
-                </ul>
-            </section>
+      <!-- PROYECTOS (tarjetas destacadas) -->
+      <section class="projects" data-aos="fade-up">
+        <h3>Proyectos destacados</h3>
+        <div class="projects-grid">
+          <article class="proj-card" data-aos="zoom-in">
+            <h4>Monitoreo Ambiental (GCP)</h4>
+            <p>Solución en GCP para monitoreo de sensores en jardín infantil: ingestión, pipeline ETL, almacenamiento y dashboard con visualizaciones. (Proyecto académico / producto MVP)</p>
+            <div class="tags"><span>GCP</span><span>Python</span><span>BigQuery</span></div>
+            <a class="link" href="#" aria-hidden="true">Ver repo</a>
+          </article>
 
-            <section class="card" data-aos="fade-left">
-                <h2>📜 Certificaciones</h2>
-                <ul>
-                    <li>Arquitectura de Software</li>
-                    <li>Calidad de Software</li>
-                    <li>Modelos de Datos</li>
-                    <li>Programación de Software</li>
-                    <li>Inglés Intermedio</li>
-                </ul>
-            </section>
+          <article class="proj-card" data-aos="zoom-in" data-aos-delay="100">
+            <h4>ETL / Limpieza de datos</h4>
+            <p>Scripts Python para extracción, limpieza y carga sobre dataset industrial, generando reportes automatizados en Excel/CSV.</p>
+            <div class="tags"><span>Python</span><span>ETL</span><span>Excel</span></div>
+            <a class="link" href="#" aria-hidden="true">Ver repo</a>
+          </article>
 
-            <section class="card" data-aos="fade-right">
-                <h2>🛠️ Conocimientos Técnicos</h2>
-                <ul>
-                    <li>Python, Java, JavaScript</li>
-                    <li>HTML, CSS</li>
-                    <li>Ionic</li>
-                    <li>MySQL Developer</li>
-                </ul>
-            </section>
+          <article class="proj-card" data-aos="zoom-in" data-aos-delay="200">
+            <h4>Sitio Informativo — Contraplano</h4>
+            <p>Soporte y mantenimiento del medio digital: actualización, carga de contenido y mejoras front-end para optimizar la experiencia.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>WordPress?</span></div>
+            <a class="link" href="#" aria-hidden="true">Ver repo</a>
+          </article>
+        </div>
+      </section>
 
-            <section class="card" data-aos="zoom-in">
-                <h2>🤝 Habilidades</h2>
-                <ul>
-                    <li>Comunicación efectiva</li>
-                    <li>Creatividad</li>
-                    <li>Trabajo en equipo</li>
-                    <li>Organización</li>
-                </ul>
-            </section>
+      <!-- HABILIDADES (no todos en recuadros) -->
+      <section class="skills" data-aos="fade-up">
+        <h3>Habilidades</h3>
 
-            <section class="card" data-aos="flip-up">
-                <h2>🌍 Idiomas</h2>
-                <ul>
-                    <li>Español: Nativo</li>
-                    <li>Inglés: Intermedio</li>
-                </ul>
-            </section>
+        <!-- Duras: badges en grid (no recuadros pesados) -->
+        <div class="hard-skills">
+          <h4>Técnicas</h4>
+          <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">Java</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">Ionic</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">Git / GitHub</span>
+          </div>
+        </div>
 
-        </section>
+        <!-- Blandas: chips inline (sin recuadros) -->
+        <div class="soft-skills">
+          <h4>Interpersonales</h4>
+          <div class="chips">
+            <span class="chip">Comunicación</span>
+            <span class="chip">Trabajo en equipo</span>
+            <span class="chip">Pensamiento crítico</span>
+            <span class="chip">Creatividad</span>
+            <span class="chip">Organización</span>
+          </div>
+        </div>
+      </section>
 
-        <footer>
-            <p>© 2025 Sebastián Álvarez · Portafolio Neon</p>
-        </footer>
+      <!-- FORMACIÓN & CERTIFICACIONES -->
+      <section class="panel grid-two" data-aos="fade-up">
+        <div>
+          <h3>Formación</h3>
+          <ul>
+            <li><strong>Ingeniería en Informática</strong> — Duoc UC (Cursando)</li>
+            <li><strong>Analista Programador</strong> — Titulación previa</li>
+            <li><strong>Licencia de Enseñanza Media</strong> — Colegio San Agustín del Bajo</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Certificaciones</h3>
+          <ul>
+            <li>Arquitectura de Software</li>
+            <li>Calidad de Software</li>
+            <li>Análisis y Desarrollo de Modelos de Datos</li>
+            <li>Certificado de Inglés Intermedio</li>
+          </ul>
+        </div>
+      </section>
 
-    </div>
+      <!-- CONTACTO / Footer -->
+      <section class="panel" data-aos="fade-up">
+        <h3>Contacto</h3>
+        <p>Si quieres ver repositorios o hablar de un proyecto, escríbeme: <a href="mailto:seba.meli.alvarez@gmail.com">seba.meli.alvarez@gmail.com</a></p>
+<div class="contact-info">
+    <a href="mailto:seba.meli.alvarez@gmail.com">📧 Correo</a>
+    <a href="https://www.instagram.com/sigo.siendo.ese" target="_blank">📷 Instagram</a>
+    <span>📱 +56 9 9504 4040</span>
+</div>
 
-    <script src="script.js"></script>
+      </section>
 
-    <!-- Librería AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    </section>
+
+    <footer class="footer">
+      <small>© 2025 Sebastián Álvarez · Portafolio Neon</small>
+    </footer>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
