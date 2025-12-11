@@ -164,3 +164,66 @@ body {
   transform: translateY(-2px);
 }
 
+/* ================================ */
+/* 📱 OPTIMIZACIÓN PARA CELULARES */
+/* ================================ */
+@media (max-width: 480px) {
+
+  /* Ajuste general */
+  body {
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Intro / Flor */
+  .flower-wrap {
+    width: 160px;
+    height: 160px;
+  }
+  .flower {
+    transform: scale(.75);
+  }
+
+  /* Hero */
+  .hero {
+    padding: 40px 10px 18px;
+  }
+  .name {
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px #00eaff;
+  }
+  .role {
+    font-size: .9rem;
+  }
+
+  /* Botones de contacto */
+  .contact {
+    gap: 10px;
+  }
+  .btn {
+    padding: 7px 12px;
+    font-size: .85rem;
+  }
+
+  /* Layout general */
+  .content {
+    margin: 20px auto;
+    padding: 0 10px;
+    gap: 16px;
+  }
+
+  /* Tarjetas de proyectos */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .proj-card {
+    padding: 14px;
+  }
+  .proj-card p {
+    font-size: .9rem;
+  }
+  .proj-card .tags span {
+    font-size: .75rem;
+    padding: 4px 6px;
+
