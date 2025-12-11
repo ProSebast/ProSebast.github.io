@@ -226,4 +226,58 @@ body {
   .proj-card .tags span {
     font-size: .75rem;
     padding: 4px 6px;
+  }
 
+  /* ================================ */
+  /* 📞 CONTACTO (NEÓN CELESTE MOBILE) */
+  /* ================================ */
+
+  .contacto {
+    padding: 25px 15px;
+    margin-top: 25px;
+    border-radius: 12px;
+    background: rgba(0, 255, 255, 0.05);
+    box-shadow: 0 0 12px rgba(0, 238, 255, 0.25);
+  }
+
+  .contacto h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #9beeff;
+    text-shadow: 0 0 8px #00eaff;
+  }
+
+  .contacto p {
+    font-size: .9rem;
+    margin-bottom: 20px;
+    line-height: 1.35;
+    color: #d6f9ff;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-btn {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(0, 255, 255, 0.12);
+    border: 2px solid #00eaff;
+    color: #aaf8ff;
+    box-shadow: 0 0 10px #00eaff;
+  }
+
+  .contact-display {
+    font-size: 1rem;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #00eaff;
+    color: #c3fbff;
+    box-shadow: 0 0 10px #00eaff;
+  }
+}
