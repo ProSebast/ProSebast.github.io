@@ -1,123 +1,65 @@
-/* GENERAL */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
-}
-
 body {
-    background: #0a0f1f;
-    color: #d7eaff;
-    overflow-x: hidden;
+    background-color: #000;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
 }
 
-/* HERO */
+/* 🌸 Intro */
+#intro {
+    position: fixed;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.intro-flower {
+    width: 180px;
+    animation: bloom 2s ease-out forwards;
+}
+
+@keyframes bloom {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* 🔥 Glow textos */
+.glow {
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #00eaff;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { text-shadow: 0 0 10px #00eaff; }
+    100% { text-shadow: 0 0 40px #00eaff; }
+}
+
 .hero {
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #0e1b33, #02101f, #0c264d);
-    animation: bgMove 10s infinite alternate ease-in-out;
+    padding: 40px;
 }
 
-@keyframes bgMove {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
-}
-
-.glow {
-    font-size: 2.6rem;
-    color: #7ddfff;
-    text-shadow: 0 0 10px #0ff, 0 0 25px #00bfff;
-    animation: glowPulse 3s infinite ease-in-out;
-}
-
-@keyframes glowPulse {
-    0% { text-shadow: 0 0 10px #00eaff; }
-    100% { text-shadow: 0 0 20px #00eaff, 0 0 40px #00bfff; }
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    opacity: 0.9;
-}
-
-/* CONTACT */
-.contact-info {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.contact-info a, 
-.contact-info span {
-    background: rgba(0, 255, 255, 0.1);
-    padding: 10px 18px;
-    border-radius: 10px;
-    color: #7de3ff;
-    text-decoration: none;
-    border: 1px solid #00d0ff;
-    box-shadow: 0 0 10px #008cff66;
+/* Cards neon */
+.card {
+    background: rgba(20, 20, 20, 0.7);
+    padding: 20px;
+    margin: 25px auto;
+    width: 80%;
+    border-radius: 15px;
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 20px #00eaff;
     transition: 0.3s;
 }
 
-.contact-info a:hover {
-    background: #00bfff;
-    color: #000;
-    box-shadow: 0 0 15px #00eaff, 0 0 30px #00bfff;
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px #00eaff;
 }
 
-/* CARDS */
+/* Contenedor */
 .container {
-    width: 90%;
-    max-width: 950px;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.card {
-    background: rgba(10, 20, 40, 0.6);
-    padding: 25px;
-    border-radius: 15px;
-    border: 1px solid #00bfff55;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 15px #008cff33;
-    transform: translateY(20px);
-    opacity: 0;
-    animation: fadeUp 0.8s forwards;
-}
-
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.card h2 {
-    color: #7ddfff;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px #00aaff;
-}
-
-.card ul {
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.card li {
-    padding: 5px 0;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-    background: #061019;
-    color: #7de3ff;
-    border-top: 1px solid #00bfff55;
-}
+    max-width: 900p
