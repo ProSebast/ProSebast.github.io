@@ -16,7 +16,6 @@
 
   <!-- Intro overlay con flor SVG -->
   <div id="intro">
-    <!-- SVG flor celeste (self-contained) -->
     <div class="flower-wrap" aria-hidden="true">
       <svg class="flower" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -27,7 +26,6 @@
           </radialGradient>
         </defs>
         <g transform="translate(100,100)">
-          <!-- pétalos -->
           <g class="petals">
             <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(0) translate(60,0)"/>
             <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(45) translate(60,0)"/>
@@ -38,7 +36,6 @@
             <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(270) translate(60,0)"/>
             <ellipse rx="18" ry="45" fill="url(#g1)" transform="rotate(315) translate(60,0)"/>
           </g>
-          <!-- centro -->
           <circle r="22" fill="#d9ffff" stroke="#00bfff" stroke-width="3" />
         </g>
       </svg>
@@ -56,7 +53,6 @@
       <div class="hero-inner">
         <h1 class="name glow">Sebastián Alejandro Álvarez Aravena</h1>
         <h2 class="role">Soy <span class="typing"></span></h2>
-
       </div>
     </header>
 
@@ -74,114 +70,100 @@
         </p>
       </section>
 
-      <!-- PROYECTOS (tarjetas destacadas) -->
+      <!-- PROYECTOS -->
       <section class="projects" data-aos="fade-up">
         <h3>Proyectos destacados</h3>
         <div class="projects-grid">
           <article class="proj-card" data-aos="zoom-in">
             <h4>Sentibot</h4>
-            <p>contiene el proyecto Sentibot, un capstone orientado a construir un sistema de análisis de sentimientos que integra modelos de deep learning, notebooks exploratorios y una API de inferencia, junto a materiales de las distintas fases del desarrollo del proyecto.
-
-</p>
-            <div class="tags"><span>Python</span><span>TensorFlow</span><span>FastAPI</span><span>Python</span></div>
-            <a class="link" href="https://github.com/Leandrosan12/CAPSTONE_803D-Grupo2-Sentibot.git" aria-hidden="true">Ver repo</a>
+            <p>Sistema de análisis de sentimientos que integra modelos de deep learning, notebooks exploratorios y una API de inferencia.</p>
+            <div class="tags"><span>Python</span><span>TensorFlow</span><span>FastAPI</span></div>
+            <a class="link-btn" href="https://github.com/Leandrosan12/CAPSTONE_803D-Grupo2-Sentibot.git" target="_blank">Ver repo</a>
           </article>
 
           <article class="proj-card" data-aos="zoom-in" data-aos-delay="100">
-            <h4>Sistema de busqueda — JobSpeed</h4>
-            <p>JobSpeed automatiza la búsqueda de ofertas laborales, extrae datos relevantes y calcula la compatibilidad con el perfil del usuario, optimizando tiempo y precisión en la búsqueda de empleo.</p>
-            <div class="tags"><span>Collector</span><span>CSV</span><span>Excel</span></div>
-            <a class="link" href="https://github.com/ProSebast/JobSpeed.git" aria-hidden="true">Ver repo</a>
+            <h4>JobSpeed</h4>
+            <p>Automatiza la búsqueda de ofertas laborales, extrae datos relevantes y calcula la compatibilidad con el perfil del usuario.</p>
+            <div class="tags"><span>Python</span><span>Web Scraping</span><span>Excel</span></div>
+            <a class="link-btn" href="https://github.com/ProSebast/JobSpeed.git" target="_blank">Ver repo</a>
           </article>
 
           <article class="proj-card" data-aos="zoom-in" data-aos-delay="200">
-            <h4>Programa — TurnoApp</h4>
-            <p>Es un sistema profesional para la gestión integral de atenciones, que permite administrar citas, realizar llamados a pacientes y generar automáticamente los horarios de los profesionales, optimizando la organización y el seguimiento de cada caso.
-Actualmente se encuentra funcionando en la Fundación Ciudad del Niño, sede Quilicura.
-Este proyecto también forma parte de mi portafolio profesional, ya que demuestra la implementación de una solución tecnológica aplicada en un entorno real, con impacto directo en la mejora de procesos y eficiencia operativa.</p>
-            <div class="tags"><span>Python</span><span>Cloud</span><span>EXCEL</span></div>
-            <a class="link" href="https://github.com/ProSebast/sistema-de-llamado.git" aria-hidden="true">Ver repo</a>
+            <h4>TurnoApp</h4>
+            <p>Gestión integral de atenciones para la Fundación Ciudad del Niño. Administra citas y genera horarios automáticamente.</p>
+            <div class="tags"><span>Python</span><span>Cloud</span><span>Tkinter</span></div>
+            <a class="link-btn" href="https://github.com/ProSebast/sistema-de-llamado.git" target="_blank">Ver repo</a>
           </article>
         </div>
       </section>
 
-      <!-- HABILIDADES (no todos en recuadros) -->
-      <section class="skills" data-aos="fade-up">
+      <!-- HABILIDADES -->
+      <section class="skills panel" data-aos="fade-up">
         <h3>Habilidades</h3>
-
-        <!-- Duras: badges en grid (no recuadros pesados) -->
-        <div class="hard-skills">
-          <h4>Técnicas</h4>
-          <div class="badges">
-            <span class="badge">Python</span>
-            <span class="badge">Java</span>
-            <span class="badge">JavaScript</span>
-            <span class="badge">HTML</span>
-            <span class="badge">CSS</span>
-            <span class="badge">Ionic</span>
-            <span class="badge">MySQL</span>
-            <span class="badge">Git / GitHub</span>
+        <div class="skills-container">
+          <div class="hard-skills">
+            <h4>Técnicas</h4>
+            <div class="badges">
+              <span class="badge">Python</span>
+              <span class="badge">Java</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">HTML/CSS</span>
+              <span class="badge">Ionic</span>
+              <span class="badge">MySQL</span>
+              <span class="badge">Git</span>
+            </div>
           </div>
-        </div>
-
-        <!-- Blandas: chips inline (sin recuadros) -->
-        <div class="soft-skills">
-          <h4>Interpersonales</h4>
-          <div class="chips">
-            <span class="chip">Comunicación</span>
-            <span class="chip">Trabajo en equipo</span>
-            <span class="chip">Pensamiento crítico</span>
-            <span class="chip">Creatividad</span>
-            <span class="chip">Organización</span>
+          <div class="soft-skills">
+            <h4>Interpersonales</h4>
+            <div class="chips">
+              <span class="chip">Comunicación</span>
+              <span class="chip">Trabajo en equipo</span>
+              <span class="chip">Pensamiento crítico</span>
+              <span class="chip">Creatividad</span>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- FORMACIÓN & CERTIFICACIONES -->
-      <section class="panel grid-two" data-aos="fade-up">
-        <div>
+      <div class="grid-two">
+        <section class="panel" data-aos="fade-up">
           <h3>Formación</h3>
-          <ul>
-            <li><strong>Ingeniería en Informática</strong> — Duoc UC 2026</li>
-            <li><strong>Analista Programador</strong> — Duoc UC 2025</li>
-            <li><strong>Licencia de Enseñanza Media</strong> — Colegio San Agustín del Bajo</li>
+          <ul class="list-styled">
+            <li><strong>Ingeniería en Informática</strong> — Duoc UC (2026)</li>
+            <li><strong>Analista Programador</strong> — Duoc UC (2025)</li>
+            <li><strong>Licencia Media</strong> — Col. San Agustín del Bajo</li>
           </ul>
-        </div>
-        <div>
+        </section>
+        <section class="panel" data-aos="fade-up">
           <h3>Certificaciones</h3>
-          <ul>
+          <ul class="list-styled">
             <li>Arquitectura de Software</li>
             <li>Calidad de Software</li>
-            <li>Análisis y Desarrollo de Modelos de Datos</li>
-            <li>Certificado de Inglés Intermedio</li>
+            <li>Modelos de Datos</li>
+            <li>Inglés Intermedio</li>
           </ul>
+        </section>
+      </div>
+
+      <!-- CONTACTO -->
+      <section class="contact-section" data-aos="fade-up">
+        <h3>Contacto</h3>
+        <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
+        <div class="contact-grid">
+          <a href="mailto:seba.meli.alvarez@gmail.com" class="contact-card">
+            <span class="icon">📧</span>
+            <span>Correo</span>
+          </a>
+          <a href="https://www.instagram.com/sigo.siendo.ese" target="_blank" class="contact-card">
+            <span class="icon">📷</span>
+            <span>Instagram</span>
+          </a>
+          <div class="contact-card no-link">
+            <span class="icon">📱</span>
+            <span>+56 9 9504 4040</span>
+          </div>
         </div>
-      </section>
-
-<!-- CONTACTO / Footer -->
-<section class="panel contact-section" data-aos="fade-up">
-    <h3 class="contact-title">Contacto</h3>
-
-    <p class="contact-text">
-        Si quieres ver mis proyectos o conversar sobre una idea, puedes contactarme aquí:
-    </p>
-
-    <div class="contact-info">
-        <a href="mailto:seba.meli.alvarez@gmail.com" class="contact-link">
-            📧 Correo
-        </a>
-
-        <a href="https://www.instagram.com/sigo.siendo.ese" target="_blank" class="contact-link">
-            📷 Instagram
-        </a>
-
-        <span class="contact-number">
-            📱 +56 9 9504 4040
-        </span>
-    </div>
-</section>
-
-
       </section>
 
     </section>

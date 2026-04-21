@@ -1,5 +1,9 @@
 /* Intro sequence: flor -> ocultar intro -> mostrar main */
 document.addEventListener("DOMContentLoaded", () => {
+  // Intro elements
+  const intro = document.getElementById("intro");
+  const main = document.getElementById("main-content");
+
   // Typed.js para el rol
   const typed = new Typed(".typing", {
     strings: ["Desarrollador Web", "Frontend", "Automatizador Python", "Estudiante de Ingeniería"],
@@ -10,42 +14,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Inicializar partículas (tsParticles)
-  tsParticles.load("particles", {
-    fullScreen: { enable: false },
-    particles: {
-      number: { value: 50 },
-      color: { value: "#00eaff" },
-      shape: { type: "circle" },
-      opacity: { value: 0.12, random: true },
-      size: { value: { min: 1, max: 3 } },
-      move: { enable: true, speed: 0.8, outModes: "bounce" },
-      links: { enable: true, distance: 120, color: "#00bfff", opacity: 0.06, width: 1 }
-    },
-    background: { color: "transparent" }
-  });
+  if (typeof tsParticles !== 'undefined') {
+    tsParticles.load("particles", {
+      fullScreen: { enable: false },
+      particles: {
+        number: { value: 50 },
+        color: { value: "#00eaff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.12, random: true },
+        size: { value: { min: 1, max: 3 } },
+        move: { enable: true, speed: 0.8, outModes: "bounce" },
+        links: { enable: true, distance: 120, color: "#00bfff", opacity: 0.06, width: 1 }
+      },
+      background: { color: "transparent" }
+    });
+  }
 
-  // Intro timing reducido de 2800 ms → 1400 ms
-  const intro = document.getElementById("intro");
-  const main = document.getElementById("main-content");
+  // FUNCIÓN PARA MOSTRAR CONTENIDO (Failsafe)
+  const showContent = () => {
+    if (intro) {
+      intro.style.opacity = "0";
+      setTimeout(() => {
+        intro.style.display = "none";
+        if (main) {
+          main.classList.remove("hidden");
+          main.style.opacity = "1";
+          
+          // Animaciones GSAP
+          if (typeof gsap !== 'undefined') {
+            gsap.from(".name", { y: 20, opacity: 0, duration: 0.8, ease: "power4.out" });
+            gsap.from(".role", { y: 20, opacity: 0, duration: 0.8, delay: 0.1, ease: "power4.out" });
+          }
+        }
+      }, 400);
+    }
+  };
 
-  setTimeout(() => {
-    intro.style.opacity = "0";
-    setTimeout(() => {
-      intro.style.display = "none";
-      main.classList.remove("hidden");
-      main.style.opacity = "1";
-      main.style.transform = "translateY(0)";
-
-      // Animaciones GSAP
-      gsap.from(".name", { y: 8, opacity: 0, duration: 0.9, ease: "power3.out" });
-      gsap.from(".role", { y: 8, opacity: 0, duration: 1, delay: 0.1, ease: "power3.out" });
-      gsap.from(".proj-card", { y: 28, opacity: 0, duration: 0.9, stagger: 0.15, ease: "power3.out" });
-
-    }, 500);
-  }, 1400); // <--- reducido aquí
+  // Forzar 1 segundo de carga
+  setTimeout(showContent, 1000);
 
   // Inicializar AOS
-  AOS.init({ duration: 900, once: false });
+  if (typeof AOS !== 'undefined') {
+    AOS.init({ duration: 900, once: false });
+  }
 
   // Hover glow en badges
   document.querySelectorAll(".badge").forEach(b => {
